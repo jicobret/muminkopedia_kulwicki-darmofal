@@ -1,6 +1,5 @@
 
 import CharModel, {ICharacter} from "../models/Character";
-import Character from "../models/Character";
 
 export async function getAllCharacters(): Promise<ICharacter[]> {
 
@@ -14,5 +13,9 @@ export async function createCharacter(character: ICharacter): Promise<ICharacter
 }
 
 export async function updateCharacter(id: number, uptCharacter: ICharacter): Promise<ICharacter | null> {
-    return Character.findByIdAndUpdate(id, uptCharacter, {returnDocument: "after"})
+    return CharModel.findByIdAndUpdate(id, uptCharacter, {returnDocument: "after"})
+}
+
+export async function deleteCharacter(id: number): Promise<ICharacter | null> {
+    return CharModel.findByIdAndDelete(id)
 }
