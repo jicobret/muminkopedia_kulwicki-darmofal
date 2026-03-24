@@ -16,7 +16,4 @@ const ArtifactSchema = new Schema<IArtifact>({
     },
 });
 
-export const ArtifactModel = mongoose.model<IArtifact>(
-    "Artifact",
-    ArtifactSchema
-);
+export default mongoose.model<IArtifact>("Artifact", ArtifactSchema);
