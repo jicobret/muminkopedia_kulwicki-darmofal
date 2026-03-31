@@ -22,7 +22,4 @@ const CharacterSchema = new Schema<ICharacter>({
     },
 });
 
-export const CharacterModel = mongoose.model<ICharacter>(
-    "Character",
-    CharacterSchema
-);
+export default mongoose.model<ICharacter>("Character", CharacterSchema);
