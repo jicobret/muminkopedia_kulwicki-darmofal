@@ -12,10 +12,10 @@ export async function createCharacter(character: ICharacter): Promise<ICharacter
     return newCharacter.save();
 }
 
-export async function updateCharacter(id: number, uptCharacter: Partial<ICharacter>): Promise<ICharacter | null> {
+export async function updateCharacter(id: string, uptCharacter: Partial<ICharacter>): Promise<ICharacter | null> {
     return CharModel.findByIdAndUpdate(id, uptCharacter, {returnDocument: "after"})
 }
 
-export async function deleteCharacter(id: number): Promise<ICharacter | null> {
+export async function deleteCharacter(id: string): Promise<ICharacter | null> {
     return CharModel.findByIdAndDelete(id)
 }
