@@ -1,0 +1,24 @@
+@baseUrl = http://localhost:3000
+
+### GET all characters
+GET {{baseUrl}}/characters
+
+###
+
+### GET all artifacts
+GET {{baseUrl}}/artifacts
+
+###
+
+### Add an artifact
+POST {{baseUrl}}/artifacts
+Content-Type: application/json
+
+{
+  "name": "Artefakt",
+  "description": "Opis artefakt",
+  "owner": "69d6006074a61038f37dc0ed"
+}
+
+### delete a character
+DELETE {{baseUrl}}/characters/69d6006074a61038f37dc0ed
