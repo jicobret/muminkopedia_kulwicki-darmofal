@@ -11,10 +11,10 @@ export async function createArtifact(artifact: IArtifact): Promise<IArtifact> {
     return newCharacter.save();
 }
 
-export async function updateArtifact(id: number, uptArtifact: IArtifact): Promise<IArtifact | null> {
-    return ArtModel.findByIdAndUpdate(id, uptArtifact, {returnDocument: "after"})
+export async function updateArtifact(id: string, uptArtifact: IArtifact): Promise<IArtifact | null> {
+    return ArtModel.findByIdAndUpdate(id, uptArtifact, { new: true })
 }
 
-export async function deleteArtifact(id: number): Promise<IArtifact | null> {
+export async function deleteArtifact(id: string): Promise<IArtifact | null> {
     return ArtModel.findByIdAndDelete(id)
 }
