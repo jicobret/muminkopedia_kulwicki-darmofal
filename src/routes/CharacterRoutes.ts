@@ -1,10 +1,5 @@
 import { Router } from "express";
-import {
-    addCharacterController,
-    deleteCharacterController,
-    fetchCharactersController,
-    updateCharacterController
-} from "../controllers/CharacterController"
+import {addCharacterController, deleteCharacterController, fetchCharactersController, updateCharacterController} from "../controllers/CharacterController"
 
 const router = Router()
 
